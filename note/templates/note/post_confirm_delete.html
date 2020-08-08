@@ -1,0 +1,19 @@
+{% extends "note/base.html" %}
+{% block content %}
+<div class="d-flex justify-content-center">
+    <div class="d-inline-flex justify-content-center content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class = "form-group">
+                <legend class="border-bottom mb-4 text-center">Notepad-Delete</legend>
+                <h1 class="text-center">Are you sure you want to delete your note?</h1>
+                <h3>&quot;{{ object.content }}&quot;</h3>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Delete Note</button>
+                <a class="btn btn-outline-info" href="{% url 'notepad' %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

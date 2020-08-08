@@ -1,0 +1,18 @@
+{% extends "note/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="d-flex justify-content-center">
+    <div class="d-inline-flex justify-content-center content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class = "form-group">
+                <legend class="border-bottom mb-4 text-center">Notepad-New Note</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-dark" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

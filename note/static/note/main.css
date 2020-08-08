@@ -1,0 +1,51 @@
+body {
+background: #fafafa;
+color: #333333;
+margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+color: gray;
+}
+
+ul {
+margin: 0;
+}
+
+.zoom:hover {
+transform: scale(1.1);
+transition: .5s;
+}
+
+.bg-steel {
+background-color: black;
+}
+
+.site-header {
+font-weight: 500;
+padding: 10px;
+}
+
+.content-section {
+background: #ffffff;
+padding: 10px 20px;
+border: 1px solid #dddddd;
+border-radius: 3px;
+margin-bottom: 20px;
+}
+
+.note-button {
+margin-bottom: 20px;
+}
+
+.note-posted {
+background-color: khaki;
+box-shadow: 0 4px 8px 0 DarkGrey;
+transition: 0.3s;
+border-radius: 5px;
+margin: 10px;
+}
+
+.note-posted:hover {
+box-shadow: 0 8px 16px 0 DarkGrey;
+}

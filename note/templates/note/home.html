@@ -1,0 +1,25 @@
+{% extends "note/base.html" %}
+{% block content %}
+    <div class="row">
+        {% for note in notes %}
+        <div class="col-lg-3">
+            <div class="card-group">
+                <div class="card note-posted text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ note.title }}</h5>
+                        <p class="card-text">{{ note.content }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-info"href="{% url 'notepad-update' note.id %}">Update</a>
+                        <a class="btn btn-danger" href="{% url 'notepad-delete' note.id%}">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="fixed-bottom note-button text-center">
+  <a class="btn btn-dark zoom" href="{% url 'notepad-create' %}">Make a Note</a>
+    </div>
+
+{% endblock content %}
